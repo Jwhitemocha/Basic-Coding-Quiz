@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>week4HwCodingQuiz</title> 
+</head>
+<body>
+    <h4>Time: <span id="time"></span></h4>
+    <div class="container jumbotron text-center" id="homeScreen">
+        <div id="question-container" class="hide"></div>
+        <h1>Basic Coding Quiz</h1>
+        <p> Answer the questions correctly, before time runs out!</p>
+        <div class="firstbuttons">
+            <button class="btn btn-dark" id="start">Start Test</button>
+            <button class="btn btn-light" id="highScore">High Scores</button>
+        </div>
+    </div>
+
+    <div class="container jumbotron justify-content-md-center" id="quizScreen"> 
+        <div class="col-md-6"> 
+            <h2 id="questions"></h2>
+            <button class="btn btn-dark answerBtn" id="answer1"></button>
+            <button class="btn btn-dark answerBtn" id="answer2"></button>
+            <button class="btn btn-dark answerBtn" id="answer3"></button>
+            <button class="btn btn-dark answerBtn" id="answer4"></button>
+            <p id="score"></p>
+        </div>
+    </div>
+
+    <div class="jumbotron text-center" id="finished">
+        <h1>You're Finished!</h1>
+        <h3 class="scoreShow"></h3>
+        <form> 
+            <span> Enter Name:</span><input type="text" id="name">
+            <button type="submit" class="btn btn-dark" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    <div class="container jumbotron justify-content-md-center" id="scoreScreen">
+        <h2>High Scores</h2> 
+        <ol id="scoreList">
+
+        </ol>
+        <button class="btn btn-light" id="clear">Clear Scores</button>
+        <button class="btn btn-dark" id="back">Back</button>
+    </div>
+    
+</body>
+</html>
